@@ -46,12 +46,6 @@ public class FundServiceImpl implements FundService {
             // 设置 POST 请求的参数，使用 x-www-form-urlencoded 格式
             // 只留下必需的参数
             List<NameValuePair> formParams = new ArrayList<>();
-//            formParams.add(new BasicNameValuePair("cfhFundFInfo_fields", "INVESTMENTIDEAR,INVESTMENTIDEARIMG"));
-//            formParams.add(new BasicNameValuePair("fundUniqueInfo_fIELDS", "FCODE,STDDEV1,STDDEV_1NRANK,STDDEV_1NFSC,STDDEV3,STDDEV_3NRANK,STDDEV_3NFSC,STDDEV5,STDDEV_5NRANK,STDDEV_5NFSC,SHARP1,SHARP_1NRANK,SHARP_1NFSC,SHARP3,SHARP_3NRANK,SHARP_3NFSC,SHARP5,SHARP_5NRANK,SHARP_5NFSC,MAXRETRA1,MAXRETRA_1NRANK,MAXRETRA_1NFSC,MAXRETRA3,MAXRETRA_3NRANK,MAXRETRA_3NFSC,MAXRETRA5,MAXRETRA_5NRANK,MAXRETRA_5NFSC,TRKERROR1,TRKERROR_1NRANK,TRKERROR_1NFSC,TRKERROR3,TRKERROR_3NRANK,TRKERROR_3NFSC,TRKERROR5,TRKERROR_5NRANK,TRKERROR_5NFSC"));
-//            formParams.add(new BasicNameValuePair("indexfields", "_id,INDEXCODE,BKID,INDEXNAME,INDEXVALUA,NEWINDEXTEXCH,PEP100"));
-//            formParams.add(new BasicNameValuePair("fundUniqueInfo_fLFIELDS", "FCODE,BUSINESSTYPE,BUSINESSTEXT,BUSINESSCODE,BUSINESSSUBTYPE,MARK"));
-//            formParams.add(new BasicNameValuePair("ISRG", "0"));
-
             formParams.add(new BasicNameValuePair("product", "EFund"));
             formParams.add(new BasicNameValuePair("FIELDS", "SHORTNAME,RZDF,DWJZ,LJJZ,SYL_1N,SYL_LN,FSRQ,ISBUY,DTZT,FTYPE,FCODE,ISSALES,ISSBDATE,ISSEDATE,TSRQ,BACKCODE,MINSG,MINSBSG,SHZT,SGZT,SOURCERATE,RATE,REALSGCODE,FEATURE,SYL,MINRG,SYL_Z,BFUNDTYPE,QDTCODE,MINDT,BAGTYPE,FUNDTYPE,BENCH,ESTABDATE,,SELLSTATE,ESTDIFF,SYSDATE,PTYPE,FUNDTYPE,ISEXCHG,ISNEW,BTYPE"));
             formParams.add(new BasicNameValuePair("FCODES", fundCode));
@@ -376,7 +370,7 @@ public class FundServiceImpl implements FundService {
                     fundFlu = fundFlu.add(item);
                 }
             }
-            System.out.println("当时幅度：" + fundFlu);
+            System.out.println("当前涨跌幅：" + fundFlu);
         }
 
         return fundFlu;
